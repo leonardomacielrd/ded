@@ -1,0 +1,15 @@
+.button{
+    background-color: #E0002D;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Roboto;
+    color: #FFF;
+    border-radius: 2px;
+    display: inline-block;
+
+    &:hover{
+        background-color: #CC0029;
+        transition: all 0.5s;
+    }
+}

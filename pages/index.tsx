@@ -2,22 +2,12 @@ import Image from 'next/image'
 import Grid from '@mui/material/Grid'
 import styles from '../styles/Home.module.scss'
 import Button from '../components/Button'
+import Card from '../components/Card'
 
-//import Paper from '@mui/material/Paper';
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-// }));
 
 export default function Home() {
   return (
     <>
-    {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>me ajude meu pai</p>
-    </main> */}
-
     <header className={styles.header}>
     <Grid container alignItems="center" justifyContent="center">
       <Grid item>
@@ -32,6 +22,7 @@ export default function Home() {
       </Grid>
     </Grid>
     </header>
+
     <section className={styles.hero}>
     <Grid container direction="column" alignItems="center" justifyContent="center" alignContent="center">
       <Grid item>
@@ -55,6 +46,7 @@ export default function Home() {
       </Grid>
     </Grid>
     </section>
+
     <section className={styles.viva}>
     <Grid container direction="row" alignItems="center" justifyContent="center">
       <Grid item xs={12}>
@@ -79,125 +71,69 @@ export default function Home() {
       </Grid>
     </Grid>
     </section>
+
     <section className={styles.slider}>
       <h2>Personagens</h2>
       <div className={styles.slides}>
         
         <div id="slide-1">
-          <div className={styles.item}>
-            <Image
-              src="/p_martinez.png"
-              alt="David Martinez"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
-
-            <h2 className={styles.name}>David Martinez</h2>
-            <p className={styles.description}>A principal lenda surgida e morta em 2076. Extremamente relevante em seu combate contra Adam Smasher</p>
-            <div className={styles.controls}>
-              <a href="#slide-2" className={styles.next}></a>
-            </div>
-          </div>
+          <Card 
+            imagem={'/p_martinez.png'} 
+            nome={'David Martinez'} 
+            desc={'A principal lenda surgida e morta em 2076. Extremamente relevante em seu combate contra Adam Smasher'}
+            antes={''}
+            depois={'#slide-2'}
+          />
         </div>
-        <div id="slide-2">
-          <div className={styles.item}>
-            <Image
-              src="/p_lucy.png"
-              alt="Lucy"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
 
-            <h2 className={styles.name}>Lucy</h2>
-            <p className={styles.description}>Uma das melhores trilha redes da história, sendo a única sobrevivente de testes para aprimoramento de trilha redes da Arasaka. </p>
-            <div className={styles.controls}>
-              <a href="#slide-1" className={styles.prev}></a>
-              <a href="#slide-3" className={styles.next}></a>
-            </div>
-          </div>
+        <div id="slide-2">
+        <Card 
+            imagem={'/p_lucy.png'} 
+            nome={'Lucy'} 
+            desc={'Uma das melhores trilha redes da história, sendo a única sobrevivente de testes para aprimoramento de trilha redes da Arasaka.'} 
+            antes={'#slide-1'}
+            depois={'#slide-3'}
+          />
         </div>
 
         <div id="slide-3">
-          <div className={styles.item}>
-            <Image
-              src="/p_pilar.png"
-              alt="Pilar"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
-
-            <h2 className={styles.name}>Pilar</h2>
-            <p className={styles.description}>Antigo líder da cidade, irmão de Rebecca. Talvez dessa vez ele possa viver.</p>
-            <div className={styles.controls}>
-              <a href="#slide-2" className={styles.prev}></a>
-              <a href="#slide-4" className={styles.next}></a>
-            </div>
-          </div>
+        <Card 
+            imagem={'/p_pilar.png'} 
+            nome={'Pilar'} 
+            desc={'Antigo líder da cidade, irmão de Rebecca. Talvez dessa vez ele possa viver.'}
+            antes={'#slide-2'}
+            depois={'#slide-4'}
+          />
         </div>
-
+        
         <div id="slide-4">
-          <div className={styles.item}>
-            <Image
-              src="/p_rebecca.png"
-              alt="Rebecca"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
-
-            <h2 className={styles.name}>Rebecca</h2>
-            <p className={styles.description}>A expert em armas do grupo, tendo como a mais forte delas a sua coragem e loucura diante do combate.</p>
-            <div className={styles.controls}>
-              <a href="#slide-3" className={styles.prev}></a>
-              <a href="#slide-5" className={styles.next}></a>
-            </div>
-          </div>
+        <Card 
+            imagem={'/p_rebecca.png'} 
+            nome={'Rebecca'} 
+            desc={'A expert em armas do grupo, tendo como a mais forte delas a sua coragem e loucura diante do combate.'}
+            antes={'#slide-3'}
+            depois={'#slide-5'}
+          />
         </div>
 
         <div id="slide-5">
-          <div className={styles.item}>
-            <Image
-              src="/p_maine.png"
-              alt="Maine"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
-
-            <h2 className={styles.name}>Maine</h2>
-            <p className={styles.description}>Primeiro líder do grupo de David Martinez e seu principal mentor. Especialista em combate corpo a corpo.</p>
-            <div className={styles.controls}>
-              <a href="#slide-4" className={styles.prev}></a>
-              <a href="#slide-6" className={styles.next}></a>
-            </div>
-          </div>
+        <Card 
+            imagem={'/p_maine.png'} 
+            nome={'Maine'} 
+            desc={'Primeiro líder do grupo de David Martinez e seu principal mentor. Especialista em combate corpo a corpo.'} 
+            antes={'#slide-4'}
+            depois={'#slide-6'}
+          />
         </div>
 
         <div id="slide-6">
-          <div className={styles.item}>
-            <Image
-              src="/p_falco.png"
-              alt="Falco"
-              className={styles.itemImg}
-              width={458}
-              height={280}
-              priority
-            />
-
-            <h2 className={styles.name}>Falco</h2>
-            <p className={styles.description}>Motorista do grupo, perito em fuga e perseguição, mais confiável que um delamain.</p>
-            <div className={styles.controls}>
-              <a href="#slide-5" className={styles.prev}></a>
-            </div>
-          </div>
+        <Card 
+            imagem={'/p_falco.png'} 
+            nome={'Falco'} 
+            desc={'Motorista do grupo, perito em fuga e perseguição, mais confiável que um delamain.'}
+            antes={'#slide-1'}
+            depois={''}
+          />
         </div>
 
       </div>

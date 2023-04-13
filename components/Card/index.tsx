@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import styles from './Card.module.scss'
 
-const Card = ({imagem, nome, desc, antes, depois}: { imagem: string; nome: string; desc: string; antes: string; depois: string; }) => {
+const Card = ({imagem, nome, desc, antes, depois}: 
+  { imagem: string; nome: string; desc: string; antes: string; depois: string; }) => {
   
   return (
       <div className={styles.item}>

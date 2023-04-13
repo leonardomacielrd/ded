@@ -1,6 +1,6 @@
 .header{
   background: #142E52;
-  padding: 10px 0;
+  max-height: 60px;
 
   img{
     position: relative;
@@ -29,11 +29,12 @@
 .hero{
   background-image: url('/hero-bg.png');
   background-size: cover;
-  height: 80vh;
-  @media (min-width:768px) {
-    height: 60vh;
-  }
+  background-position: center;
   text-align: center;
+  height: 95vh;
+  @media (min-width:768px){
+    height:calc(100vh -  60px); 
+  }
 
   &>div{
     height: 100%;

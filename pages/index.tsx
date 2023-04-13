@@ -125,7 +125,7 @@ export default function Home() {
             depois={'#slide-6'}
           />
         </div>
-
+        
         <div id="slide-6">
         <Card 
             imagem={'/p_falco.png'} 
